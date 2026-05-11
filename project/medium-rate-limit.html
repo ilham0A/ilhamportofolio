@@ -4,9 +4,15 @@
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
 
-    <title>Project | Muhammad Ilham</title>
-    <meta content="" name="description" />
-    <meta content="" name="keywords" />
+    <title>Medium Write-up | Muhammad Ilham</title>
+    <meta
+      content="Medium write-up tentang broken authentication dan bypass OTP menggunakan JSON manipulation."
+      name="description"
+    />
+    <meta
+      content="Medium, Bug Hunting, Broken Authentication, OTP Bypass, JSON Manipulation, Web Security, Write-up"
+      name="keywords"
+    />
 
     <!-- Google Fonts -->
     <link
@@ -70,9 +76,45 @@
         overflow-wrap: break-word;
       }
 
+      .portfolio-info ul {
+        padding-left: 0;
+      }
+
+      .portfolio-info ul li {
+        margin-bottom: 10px;
+      }
+
       .portfolio-description p {
         line-height: 1.7;
         text-align: justify;
+      }
+
+      .project-link {
+        color: #149ddd;
+        text-decoration: none;
+        word-break: break-word;
+      }
+
+      .project-link:hover {
+        color: #37b3ed;
+        text-decoration: underline;
+      }
+
+      .tag-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-top: 14px;
+      }
+
+      .tag-list span {
+        display: inline-block;
+        padding: 6px 10px;
+        font-size: 13px;
+        border-radius: 20px;
+        background: #eef7ff;
+        color: #149ddd;
+        font-weight: 500;
       }
 
       .breadcrumbs .d-flex {
@@ -129,13 +171,14 @@
           max-height: 360px;
         }
 
-        .portfolio-info ul {
-          padding-left: 0;
-        }
-
         .portfolio-info ul li {
           font-size: 14px;
           line-height: 1.6;
+        }
+
+        .tag-list span {
+          font-size: 12px;
+          padding: 5px 9px;
         }
       }
     </style>
@@ -210,10 +253,10 @@
       <section id="breadcrumbs" class="breadcrumbs">
         <div class="container">
           <div class="d-flex justify-content-between align-items-center">
-            <h2>Project Details</h2>
+            <h2>Medium Write-up Details</h2>
             <ol>
               <li><a href="../index.html">Home</a></li>
-              <li>Project Details</li>
+              <li>Medium Write-up</li>
             </ol>
           </div>
         </div>
@@ -230,20 +273,13 @@
                 <div class="swiper-wrapper align-items-center">
                   <div class="swiper-slide">
                     <img
-                      src="../assets/img/project/Pentest - project.jpg"
-                      alt="Dokumentasi project penetration tester pertama"
-                    />
-                  </div>
-
-                  <div class="swiper-slide">
-                    <img
-                      src="../assets/img/project/Pentest - project2.jpg"
-                      alt="Dokumentasi project penetration tester kedua"
+                      src="../assets/img/project/medium-rate-limit.png"
+                      alt="Medium write-up broken authentication bypass OTP"
                     />
                   </div>
                 </div>
 
-                <!-- Swiper pagination harus di luar swiper-wrapper -->
+                <!-- Swiper pagination harus berada di luar swiper-wrapper -->
                 <div class="swiper-pagination"></div>
               </div>
             </div>
@@ -251,28 +287,59 @@
             <!-- Detail -->
             <div class="col-lg-4 col-md-12">
               <div class="portfolio-info">
-                <h3>Penetration Tester</h3>
+                <h3>Broken Authentication Write-up</h3>
                 <ul>
                   <li><strong>Category</strong>: Project</li>
-                  <li><strong>Date</strong>: Januari - Februari 2024</li>
-                  <!-- 
+                  <li><strong>Topic</strong>: Bug Hunting & Web Security</li>
+                  <li><strong>Platform</strong>: Medium</li>
                   <li>
                     <strong>Project URL</strong>:
-                    <a href="#">www.example.com</a>
-                  </li> 
-                  -->
+                    <a
+                      class="project-link"
+                      href="https://ilhamm0a.medium.com/broken-authentication-bypass-otp-with-json-manipulation-6454b45ac624"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Read on Medium
+                    </a>
+                  </li>
                 </ul>
               </div>
 
               <div class="portfolio-description">
                 <h2>Detail</h2>
+
                 <p>
-                  Saya mendapatkan kesempatan berharga untuk berperan sebagai
-                  Penetration Tester dalam kerja sama antara Universitas
-                  Narotama dan Secure Code Network. Melalui project ini, saya
-                  memperoleh pengalaman langsung dalam memahami proses pengujian
-                  keamanan, analisis celah keamanan, serta praktik kerja di
-                  bidang penetration testing.
+                  Saya menulis artikel Medium dengan judul
+                  <strong>
+                    Broken Authentication: Bypass OTP with JSON Manipulation </strong
+                  >. Tulisan ini membahas pengalaman saya saat melakukan bug
+                  hunting dan menemukan celah keamanan pada sistem verifikasi
+                  OTP.
+                </p>
+
+                <p>
+                  Pada temuan ini, terdapat kelemahan pada logic API yang
+                  memungkinkan proses verifikasi OTP dapat dilewati melalui
+                  manipulasi response JSON. Celah tersebut menyebabkan akun
+                  dapat dibuat tanpa memasukkan OTP yang valid, sehingga
+                  berpotensi menimbulkan risiko pembuatan akun tidak sah.
+                </p>
+
+                <p>
+                  Write-up ini menjelaskan bagaimana kesalahan kecil pada proses
+                  validasi authentication dapat berdampak serius terhadap
+                  keamanan aplikasi. Melalui dokumentasi ini, saya menyoroti
+                  pentingnya validasi di sisi server, terutama pada fitur
+                  sensitif seperti OTP verification, account registration, dan
+                  authentication flow.
+                </p>
+
+                <p>
+                  Dari pengalaman ini, saya mendapatkan pemahaman lebih dalam
+                  mengenai broken authentication, keamanan API, serta pentingnya
+                  memastikan bahwa keputusan keamanan tidak hanya bergantung
+                  pada response yang dapat dimanipulasi di sisi client.
                 </p>
               </div>
             </div>

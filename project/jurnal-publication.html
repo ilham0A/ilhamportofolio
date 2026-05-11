@@ -42,26 +42,11 @@
 
     <!-- Custom Responsive CSS -->
     <style>
-      .portfolio-details .portfolio-details-slider {
-        width: 100%;
-        overflow: hidden;
-        border-radius: 12px;
-        background: #fff;
-      }
-
-      .portfolio-details .portfolio-details-slider .swiper-slide {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-
       .portfolio-details .portfolio-details-slider img {
         width: 100%;
         height: auto;
-        max-height: 520px;
         object-fit: contain;
         border-radius: 12px;
-        display: block;
       }
 
       .portfolio-info,
@@ -71,18 +56,12 @@
       }
 
       .portfolio-description p {
-        line-height: 1.7;
         text-align: justify;
+        line-height: 1.7;
       }
 
       .breadcrumbs .d-flex {
         gap: 12px;
-      }
-
-      @media (max-width: 991px) {
-        .portfolio-info {
-          margin-top: 20px;
-        }
       }
 
       @media (max-width: 768px) {
@@ -93,11 +72,10 @@
 
         .breadcrumbs h2 {
           font-size: 22px;
-          margin-bottom: 0;
         }
 
-        .breadcrumbs ol {
-          padding-left: 0;
+        .portfolio-info {
+          margin-top: 20px;
         }
 
         .portfolio-info h3 {
@@ -125,10 +103,6 @@
           margin-bottom: 20px;
         }
 
-        .portfolio-details .portfolio-details-slider img {
-          max-height: 360px;
-        }
-
         .portfolio-info ul {
           padding-left: 0;
         }
@@ -154,23 +128,21 @@
             alt="Foto Muhammad Ilham"
             class="img-fluid rounded-circle"
           />
-
           <h1 class="text-light">
             <a href="../index.html">Muhammad Ilham</a>
           </h1>
 
           <div class="social-links mt-3 text-center">
-            <a href="https://www.instagram.com/ilhamm.0a" class="instagram">
-              <i class="bx bxl-instagram"></i>
-            </a>
-
-            <a href="https://id.linkedin.com/in/ilhamm0a" class="linkedin">
-              <i class="bx bxl-linkedin"></i>
-            </a>
-
-            <a href="https://ilhamm0a.medium.com/" class="medium">
-              <i class="bi bi-medium"></i>
-            </a>
+            <a href="https://www.instagram.com/ilhamm.0a" class="instagram"
+              ><i class="bx bxl-instagram"></i
+            ></a>
+            <a href="https://id.linkedin.com/in/ilhamm0a" class="linkedin"
+              ><i class="bx bxl-linkedin"></i
+            ></a>
+            <a href="https://ilhamm0a.medium.com/" class="medium"
+              ><i class="bi bi-medium"></i
+            ></a>
+          </div>
           </div>
         </div>
 
@@ -181,19 +153,17 @@
                 <i class="bx bx-home"></i> <span>Home</span>
               </a>
             </li>
-
             <li>
               <a href="../#about" class="nav-link scrollto">
                 <i class="bx bx-user"></i> <span>About</span>
               </a>
             </li>
-
             <li>
               <a href="../#portfolio" class="nav-link scrollto">
-                <i class="bi bi-card-text"></i> <span>Achievements</span>
+                <i class="bi bi-card-text"></i> <span>
+Achievements</span>
               </a>
             </li>
-
             <li>
               <a href="../#contact" class="nav-link scrollto">
                 <i class="bx bx-envelope"></i> <span>Contact</span>
@@ -230,20 +200,27 @@
                 <div class="swiper-wrapper align-items-center">
                   <div class="swiper-slide">
                     <img
-                      src="../assets/img/project/Pentest - project.jpg"
-                      alt="Dokumentasi project penetration tester pertama"
+                      src="../assets/img/project/jurnal1.png"
+                      alt="Publikasi jurnal steganografi halaman 1"
                     />
                   </div>
 
                   <div class="swiper-slide">
                     <img
-                      src="../assets/img/project/Pentest - project2.jpg"
-                      alt="Dokumentasi project penetration tester kedua"
+                      src="../assets/img/project/jurnal2.png"
+                      alt="Publikasi jurnal steganografi halaman 2"
+                    />
+                  </div>
+
+                  <div class="swiper-slide">
+                    <img
+                      src="../assets/img/project/jurnal3.png"
+                      alt="Publikasi jurnal steganografi halaman 3"
                     />
                   </div>
                 </div>
 
-                <!-- Swiper pagination harus di luar swiper-wrapper -->
+                <!-- Ini harus di luar swiper-wrapper -->
                 <div class="swiper-pagination"></div>
               </div>
             </div>
@@ -251,14 +228,14 @@
             <!-- Detail -->
             <div class="col-lg-4 col-md-12">
               <div class="portfolio-info">
-                <h3>Penetration Tester</h3>
+                <h3>Publikasi Jurnal Steganografi Citra Digital</h3>
                 <ul>
                   <li><strong>Category</strong>: Project</li>
-                  <li><strong>Date</strong>: Januari - Februari 2024</li>
+                  <li><strong>Date</strong>: 31 Januari 2026</li>
                   <!-- 
                   <li>
                     <strong>Project URL</strong>:
-                    <a href="#">www.example.com</a>
+                    <a href="#">Link jurnal kamu</a>
                   </li> 
                   -->
                 </ul>
@@ -267,12 +244,31 @@
               <div class="portfolio-description">
                 <h2>Detail</h2>
                 <p>
-                  Saya mendapatkan kesempatan berharga untuk berperan sebagai
-                  Penetration Tester dalam kerja sama antara Universitas
-                  Narotama dan Secure Code Network. Melalui project ini, saya
-                  memperoleh pengalaman langsung dalam memahami proses pengujian
-                  keamanan, analisis celah keamanan, serta praktik kerja di
-                  bidang penetration testing.
+                  Saya melakukan penelitian yang membandingkan kualitas citra
+                  grayscale hasil steganografi menggunakan metode Least
+                  Significant Bit (LSB) dan Discrete Cosine Transform (DCT).
+                  Penelitian ini bertujuan untuk menganalisis perbedaan kualitas
+                  visual citra pada pendekatan domain spasial dan domain
+                  frekuensi.
+                </p>
+
+                <p>
+                  Pengujian dilakukan secara eksperimental menggunakan dataset
+                  USC-SIPI dengan variasi parameter LSB sebanyak 1 bit, 2 bit,
+                  dan 4 bit, serta DCT dengan strength 0.01 dan 0.05. Kualitas
+                  citra hasil penyisipan dievaluasi menggunakan Peak
+                  Signal-to-Noise Ratio (PSNR) dan Structural Similarity Index
+                  Measure (SSIM).
+                </p>
+
+                <p>
+                  Hasil penelitian menunjukkan bahwa metode DCT dengan strength
+                  0.01 menghasilkan kualitas citra terbaik dengan nilai PSNR
+                  57.47 dB dan SSIM 0.9997. Sementara itu, LSB-1bit memberikan
+                  keseimbangan terbaik antara kualitas citra dan kapasitas
+                  penyisipan. Penelitian ini menunjukkan adanya trade-off antara
+                  kualitas citra dan kapasitas penyisipan pada kedua metode
+                  steganografi.
                 </p>
               </div>
             </div>

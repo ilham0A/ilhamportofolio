@@ -4,9 +4,15 @@
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
 
-    <title>Project | Muhammad Ilham</title>
-    <meta content="" name="description" />
-    <meta content="" name="keywords" />
+    <title>Medium Write-up | Muhammad Ilham</title>
+    <meta
+      content="Medium write-up tentang bug hunting exposed .git yang menyebabkan akses ke source code dan database."
+      name="description"
+    />
+    <meta
+      content="Medium, Bug Hunting, Exposed Git, Penetration Testing, Cyber Security, Write-up"
+      name="keywords"
+    />
 
     <!-- Google Fonts -->
     <link
@@ -42,14 +48,35 @@
 
     <!-- Custom Responsive CSS -->
     <style>
+      html,
+      body {
+        max-width: 100%;
+        overflow-x: hidden;
+      }
+
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .portfolio-details .row {
+        align-items: flex-start;
+      }
+
       .portfolio-details .portfolio-details-slider {
         width: 100%;
+        max-width: 100%;
         overflow: hidden;
         border-radius: 12px;
         background: #fff;
       }
 
+      .portfolio-details .portfolio-details-slider .swiper-wrapper {
+        width: 100%;
+      }
+
       .portfolio-details .portfolio-details-slider .swiper-slide {
+        width: 100%;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -66,8 +93,17 @@
 
       .portfolio-info,
       .portfolio-description {
+        max-width: 100%;
         word-wrap: break-word;
         overflow-wrap: break-word;
+      }
+
+      .portfolio-info ul {
+        padding-left: 0;
+      }
+
+      .portfolio-info ul li {
+        margin-bottom: 10px;
       }
 
       .portfolio-description p {
@@ -75,8 +111,42 @@
         text-align: justify;
       }
 
+      .project-link {
+        color: #149ddd;
+        text-decoration: none;
+        word-break: break-word;
+      }
+
+      .project-link:hover {
+        color: #37b3ed;
+        text-decoration: underline;
+      }
+
+      .tag-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-top: 14px;
+      }
+
+      .tag-list span {
+        display: inline-block;
+        padding: 6px 10px;
+        font-size: 13px;
+        border-radius: 20px;
+        background: #eef7ff;
+        color: #149ddd;
+        font-weight: 500;
+      }
+
       .breadcrumbs .d-flex {
         gap: 12px;
+      }
+
+      @media (max-width: 1199px) {
+        #main {
+          margin-left: 0;
+        }
       }
 
       @media (max-width: 991px) {
@@ -98,6 +168,39 @@
 
         .breadcrumbs ol {
           padding-left: 0;
+          margin-bottom: 0;
+        }
+
+        .portfolio-details {
+          padding-top: 30px;
+        }
+
+        .portfolio-details .container {
+          padding-left: 16px;
+          padding-right: 16px;
+        }
+
+        .portfolio-details .row {
+          flex-direction: column;
+        }
+
+        .portfolio-details .portfolio-details-slider {
+          margin-bottom: 20px;
+        }
+
+        .portfolio-details .portfolio-details-slider img {
+          width: 100%;
+          max-height: 300px;
+          object-fit: contain;
+        }
+
+        .portfolio-info {
+          margin-top: 20px;
+        }
+
+        .portfolio-info,
+        .portfolio-description {
+          padding: 0;
         }
 
         .portfolio-info h3 {
@@ -121,21 +224,35 @@
           padding-right: 16px;
         }
 
-        .portfolio-details .portfolio-details-slider {
-          margin-bottom: 20px;
+        .breadcrumbs h2 {
+          font-size: 20px;
         }
 
         .portfolio-details .portfolio-details-slider img {
-          max-height: 360px;
+          max-height: 260px;
         }
 
-        .portfolio-info ul {
-          padding-left: 0;
+        .portfolio-info h3 {
+          font-size: 18px;
         }
 
         .portfolio-info ul li {
           font-size: 14px;
           line-height: 1.6;
+        }
+
+        .portfolio-description h2 {
+          font-size: 20px;
+        }
+
+        .portfolio-description p {
+          font-size: 14px;
+          line-height: 1.7;
+        }
+
+        .tag-list span {
+          font-size: 12px;
+          padding: 5px 9px;
         }
       }
     </style>
@@ -213,7 +330,7 @@
             <h2>Project Details</h2>
             <ol>
               <li><a href="../index.html">Home</a></li>
-              <li>Project Details</li>
+              <li>Medium Write-up</li>
             </ol>
           </div>
         </div>
@@ -230,20 +347,13 @@
                 <div class="swiper-wrapper align-items-center">
                   <div class="swiper-slide">
                     <img
-                      src="../assets/img/project/Pentest - project.jpg"
-                      alt="Dokumentasi project penetration tester pertama"
-                    />
-                  </div>
-
-                  <div class="swiper-slide">
-                    <img
-                      src="../assets/img/project/Pentest - project2.jpg"
-                      alt="Dokumentasi project penetration tester kedua"
+                      src="../assets/img/project/medium-exposed-git.png"
+                      alt="Medium write-up exposed git halaman pertama"
                     />
                   </div>
                 </div>
 
-                <!-- Swiper pagination harus di luar swiper-wrapper -->
+                <!-- Swiper pagination harus berada di luar swiper-wrapper -->
                 <div class="swiper-pagination"></div>
               </div>
             </div>
@@ -251,28 +361,66 @@
             <!-- Detail -->
             <div class="col-lg-4 col-md-12">
               <div class="portfolio-info">
-                <h3>Penetration Tester</h3>
+                <h3>Medium Write-up Bug Hunting</h3>
                 <ul>
                   <li><strong>Category</strong>: Project</li>
-                  <li><strong>Date</strong>: Januari - Februari 2024</li>
-                  <!-- 
+                  <li>
+                    <strong>Topic</strong>: Bug Hunting &amp; Web Security
+                  </li>
+                  <li><strong>Platform</strong>: Medium</li>
                   <li>
                     <strong>Project URL</strong>:
-                    <a href="#">www.example.com</a>
-                  </li> 
-                  -->
+                    <a
+                      class="project-link"
+                      href="https://ilhamm0a.medium.com/exploiting-an-exposed-git-gaining-access-to-source-code-and-database-6cb7a5df6b4c"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Read on Medium
+                    </a>
+                  </li>
                 </ul>
               </div>
 
               <div class="portfolio-description">
                 <h2>Detail</h2>
+
                 <p>
-                  Saya mendapatkan kesempatan berharga untuk berperan sebagai
-                  Penetration Tester dalam kerja sama antara Universitas
-                  Narotama dan Secure Code Network. Melalui project ini, saya
-                  memperoleh pengalaman langsung dalam memahami proses pengujian
-                  keamanan, analisis celah keamanan, serta praktik kerja di
-                  bidang penetration testing.
+                  Saya menulis artikel pertama saya di Medium dengan judul
+                  <strong>
+                    Exploiting an Exposed .git: Gaining Access to Source Code
+                    and Database</strong
+                  >. Tulisan ini membahas pengalaman saya saat melakukan bug
+                  hunting pada sebuah aplikasi web dan menemukan direktori
+                  <strong>.git</strong> yang dapat diakses secara publik.
+                </p>
+
+                <p>
+                  Dalam proses eksplorasi target, saya mencoba mengakses
+                  beberapa path umum yang berpotensi menyimpan informasi
+                  sensitif. Salah satunya adalah <strong>.git/config</strong>,
+                  yang seharusnya tidak dapat diakses oleh publik. Dari temuan
+                  tersebut, saya dapat mengidentifikasi adanya risiko kebocoran
+                  konfigurasi Git pada subdomain target.
+                </p>
+
+                <p>
+                  Setelah mengetahui bahwa folder <strong>.git</strong> terbuka,
+                  saya melakukan proses rekonstruksi repository menggunakan
+                  GitTools untuk menganalisis source code yang berhasil
+                  diekstrak. Dari hasil analisis, ditemukan file database yang
+                  berisi kredensial seperti akun admin, staff, dan data penting
+                  lainnya. Informasi tersebut kemudian berhasil digunakan untuk
+                  login ke sistem target.
+                </p>
+
+                <p>
+                  Write-up ini menjadi dokumentasi pembelajaran mengenai dampak
+                  serius dari kesalahan konfigurasi server, khususnya ketika
+                  folder <strong>.git</strong> terekspos di lingkungan produksi.
+                  Melalui tulisan ini, saya juga membagikan pentingnya validasi
+                  konfigurasi deployment dan pembatasan akses terhadap file
+                  sensitif pada aplikasi web.
                 </p>
               </div>
             </div>
